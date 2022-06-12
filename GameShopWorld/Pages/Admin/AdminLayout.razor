@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+<div class="bg-info text-white p-2">
+<span class="navbar-brand ml-2">CHÀO MỪNG TỚI SHOP GAME</span>
+</div><div class="container-fluid">
+<div class="row p-2">
+<div class="col-3">
+<NavLink class="btn btn-outline-primary btn-block"
+href="/admin/games"
+ActiveClass="btn-primary text-white"
+Match="NavLinkMatch.Prefix">
+Game
+</NavLink>
+<NavLink class="btn btn-outline-primary btn-block"
+href="/admin/orders"
+ActiveClass="btn-primary text-white"
+Match="NavLinkMatch.Prefix">
+Thêm Game
+</NavLink>
+</div>
+<div class="col">
+@Body
+</div>
+</div>
+</div>

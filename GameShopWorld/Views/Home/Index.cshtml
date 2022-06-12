@@ -1,0 +1,29 @@
+﻿@model GameShopWorld.Models.ViewModels.GamesListViewModel
+<link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+@foreach (var p in Model.Games)
+{
+<partial name="GameTemplate" model="p" />
+<div class="item-list">
+    <div class="item">
+        <div class="item-img">
+            <img src="~/HinhAnh/dying-light.png" width="250" height="auto"/>
+            <div class="icon-list"> 
+                <button type ="button">
+                    <i class = "fas fa-sync-alt"></i>
+                </button>
+                <button type ="button">
+                    <i class = "fas fa-shopping-cart"></i>
+                </button>
+                <button type ="button">
+                    <i class = "fas fa-heart"></i>
+                </button>
+                </div>
+                </div>
+            </div>
+        </div>
+}
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+page-class="btn" page-class-normal="btn-outline-dark"
+page-class-selected="btn-primary" page-url-genre="@Model.CurrentGenre"
+class="btn-group pull-right m-1">
+</div>
